@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C2_03_SignEmptyField", "signatures\chapter2\C2_03_SignEmptyField\C2_03_SignEmptyField.csproj", "{C4D24DC9-D017-47CE-ABEA-465BD01831BA}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "itextsharp", "..\trunk\src\core\itextsharp.csproj", "{84C4FDD9-3ED7-453B-B9DA-B3ED52CB071C}"
 EndProject
 Global
