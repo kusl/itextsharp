@@ -5,6 +5,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C2_03_SignEmptyField", "sig
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "itextsharp", "..\trunk\src\core\itextsharp.csproj", "{84C4FDD9-3ED7-453B-B9DA-B3ED52CB071C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C3_01_SignWithCAcert", "signatures\chapter3\C3_01_SignWithCAcert\C3_01_SignWithCAcert.csproj", "{3EF493AE-B0F5-45F0-98DA-54419307BE53}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "chapter3", "chapter3", "{0CFDC521-82C9-4D5D-8DB1-BF8A08FA5A98}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "chapter2", "chapter2", "{C9F968AB-79B5-41B7-8E90-3B2C9F0B808B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "signatures", "signatures", "{A8BCD569-2E80-442F-B37D-961CEFF9D8CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,8 +27,18 @@ Global
 		{84C4FDD9-3ED7-453B-B9DA-B3ED52CB071C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84C4FDD9-3ED7-453B-B9DA-B3ED52CB071C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84C4FDD9-3ED7-453B-B9DA-B3ED52CB071C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EF493AE-B0F5-45F0-98DA-54419307BE53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EF493AE-B0F5-45F0-98DA-54419307BE53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EF493AE-B0F5-45F0-98DA-54419307BE53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EF493AE-B0F5-45F0-98DA-54419307BE53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3EF493AE-B0F5-45F0-98DA-54419307BE53} = {0CFDC521-82C9-4D5D-8DB1-BF8A08FA5A98}
+		{C4D24DC9-D017-47CE-ABEA-465BD01831BA} = {C9F968AB-79B5-41B7-8E90-3B2C9F0B808B}
+		{C9F968AB-79B5-41B7-8E90-3B2C9F0B808B} = {A8BCD569-2E80-442F-B37D-961CEFF9D8CC}
+		{0CFDC521-82C9-4D5D-8DB1-BF8A08FA5A98} = {A8BCD569-2E80-442F-B37D-961CEFF9D8CC}
 	EndGlobalSection
 EndGlobal
