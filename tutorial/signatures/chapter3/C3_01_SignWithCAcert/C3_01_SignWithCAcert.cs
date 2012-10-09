@@ -31,17 +31,30 @@ namespace signatures.chapter3 {
                          ITSAClient tsaClient,
                          int estimatedSize) {
             // Creating the reader and the stamper
-            PdfReader reader = new PdfReader(src);
-            FileStream os = new FileStream(dest, FileMode.OpenOrCreate);
-            PdfStamper stamper = PdfStamper.CreateSignature(reader, os, '\0');
-            // Creating the appearance
-            PdfSignatureAppearance appearance = stamper.SignatureAppearance;
-            appearance.Reason = reason;
-            appearance.Location = location;
-            appearance.SetVisibleSignature(new Rectangle(36, 748, 144, 780), 1, "sig");
-            // Creating the signature
-            IExternalSignature pks = new PrivateKeySignature(pk, digestAlgorithm);
-            MakeSignature.SignDetached(appearance, pks, chain, crlList, ocspClient, tsaClient, estimatedSize, subfilter);
+            PdfReader reader = null;
+            PdfStamper stamper = null;
+            FileStream os = null;
+            try {
+                reader = new PdfReader(src);
+                os = new FileStream(dest, FileMode.Create);
+                stamper = PdfStamper.CreateSignature(reader, os, '\0');
+                // Creating the appearance
+                PdfSignatureAppearance appearance = stamper.SignatureAppearance;
+                appearance.Reason = reason;
+                appearance.Location = location;
+                appearance.SetVisibleSignature(new Rectangle(36, 748, 144, 780), 1, "sig");
+                // Creating the signature
+                IExternalSignature pks = new PrivateKeySignature(pk, digestAlgorithm);
+                MakeSignature.SignDetached(appearance, pks, chain, crlList, ocspClient, tsaClient, estimatedSize,
+                                           subfilter);
+            } finally {
+                if (reader != null)
+                    reader.Close();
+                if (stamper != null)
+                    stamper.Close();
+                if (os != null)
+                    os.Close();
+            }
         }
 
         public static void Main(String[] args) {
@@ -59,13 +72,13 @@ namespace signatures.chapter3 {
                     break;
                 }
             }
-            AsymmetricKeyEntry pk = ks.GetKey(alias);
+            AsymmetricKeyParameter pk = ks.GetKey(alias).Key;
             ICollection<X509Certificate> chain = new List<X509Certificate>();
             foreach (X509CertificateEntry entry in ks.GetCertificateChain(alias)) {
                 chain.Add(entry.Certificate);    
             }
             C3_01_SignWithCAcert app = new C3_01_SignWithCAcert();
-            app.Sign(SRC, DEST, chain, pk.Key, DigestAlgorithms.SHA256, CryptoStandard.CMS, "Test",
+            app.Sign(SRC, DEST, chain, pk, DigestAlgorithms.SHA256, CryptoStandard.CMS, "Test",
                      "Ghent", null, null, null, 0);
         }
     }
