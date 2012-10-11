@@ -18,7 +18,7 @@ using iTextSharp.text.pdf.security;
 
 namespace signatures.chapter3 {
 
-    public class C3_05_SignWithCRLOffline : C3_01_SignWithCAcert {
+    public class C3_05_SignWithCRLOffline {
         public static String CRLURL = "../../../../resources/revoke.crl";
         public static String DEST = "../../../../results/chapter3/hello_cacert_crl_offline.pdf";
 
@@ -58,8 +58,7 @@ namespace signatures.chapter3 {
 
             IList<ICrlClient> crlList = new List<ICrlClient>();
             crlList.Add(crlClient);
-            C3_05_SignWithCRLOffline app = new C3_05_SignWithCRLOffline();
-            app.Sign(SRC, DEST, chain, pk, DigestAlgorithms.SHA256, CryptoStandard.CMS, "Test",
+            C3_01_SignWithCAcert.Sign(C3_01_SignWithCAcert.SRC, DEST, chain, pk, DigestAlgorithms.SHA256, CryptoStandard.CMS, "Test",
                      "Ghent",
                      crlList, null, null, 0);
         }

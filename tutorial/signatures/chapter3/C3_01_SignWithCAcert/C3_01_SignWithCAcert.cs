@@ -22,7 +22,7 @@ namespace signatures.chapter3 {
         public static String SRC = "../../../../resources/hello.pdf";
         public static String DEST = "../../../../results/chapter3/hello_cacert.pdf";
 
-        public void Sign(String src, String dest,
+        static public void Sign(String src, String dest,
                          ICollection<X509Certificate> chain, ICipherParameters pk,
                          String digestAlgorithm, CryptoStandard subfilter,
                          String reason, String location,
@@ -77,8 +77,7 @@ namespace signatures.chapter3 {
             foreach (X509CertificateEntry entry in ks.GetCertificateChain(alias)) {
                 chain.Add(entry.Certificate);    
             }
-            C3_01_SignWithCAcert app = new C3_01_SignWithCAcert();
-            app.Sign(SRC, DEST, chain, pk, DigestAlgorithms.SHA256, CryptoStandard.CMS, "Test",
+            Sign(SRC, DEST, chain, pk, DigestAlgorithms.SHA256, CryptoStandard.CMS, "Test",
                      "Ghent", null, null, null, 0);
         }
     }

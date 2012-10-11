@@ -17,7 +17,7 @@ using iTextSharp.text.pdf.security;
 
 namespace signatures.chapter3 {
 
-    public class C3_09_SignWithTSA : C3_01_SignWithCAcert {
+    public class C3_09_SignWithTSA {
         public static String DEST = "../../../../results/chapter3/hello_cacert_ocsp_ts.pdf";
 
         public static void Main(String[] args) {
@@ -45,8 +45,7 @@ namespace signatures.chapter3 {
             }
             IOcspClient ocspClient = new OcspClientBouncyCastle();
             ITSAClient tsaClient = new TSAClientBouncyCastle(tsaUrl, tsaUser, tsaPass);
-            C3_09_SignWithTSA app = new C3_09_SignWithTSA();
-            app.Sign(SRC, DEST, chain, pk, DigestAlgorithms.SHA256, CryptoStandard.CMS, "Test", "Ghent",
+            C3_01_SignWithCAcert.Sign(C3_01_SignWithCAcert.SRC, DEST, chain, pk, DigestAlgorithms.SHA256, CryptoStandard.CMS, "Test", "Ghent",
                      null, ocspClient, tsaClient, 0);
         }
     }

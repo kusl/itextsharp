@@ -11,7 +11,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.util;
 using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Tls;
 using Org.BouncyCastle.Pkcs;
 using Org.BouncyCastle.X509;
 using iTextSharp.text.log;
@@ -19,8 +18,7 @@ using iTextSharp.text.pdf.security;
 
 namespace signatures.chapter3 {
 
-    public class C3_03_SignWithCRLDefaultImp : C3_01_SignWithCAcert {
-        public static String SRC = "../../../../resources/hello.pdf";
+    public class C3_03_SignWithCRLDefaultImp {
         public static String DEST = "../../../../results/chapter3/hello_cacert_crl_imp.pdf";
 
         public static void Main(String[] args) {
@@ -47,8 +45,7 @@ namespace signatures.chapter3 {
             LoggerFactory.GetInstance().SetLogger(new SysoLogger());
             IList<ICrlClient> crlList = new List<ICrlClient>();
             crlList.Add(new CrlClientOnline());
-            C3_03_SignWithCRLDefaultImp app = new C3_03_SignWithCRLDefaultImp();
-            app.Sign(SRC, DEST, chain, pk, DigestAlgorithms.SHA256, CryptoStandard.CMS, "Test",
+            C3_01_SignWithCAcert.Sign(C3_01_SignWithCAcert.SRC, DEST, chain, pk, DigestAlgorithms.SHA256, CryptoStandard.CMS, "Test",
                      "Ghent",
                      crlList, null, null, 0);
         }

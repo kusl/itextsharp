@@ -19,7 +19,7 @@ namespace signatures.chapter3 {
     public class C3_08_GetTsaUrl {
         public static void Main(String[] args) {
             Properties properties = new Properties();
-            properties.Load(new FileStream("../../../../resources/properties.dat", FileMode.Open));
+            properties.Load(new FileStream("c:/home/blowagie/key.properties", FileMode.Open));
             String path = properties["PRIVATE"];
             char[] pass = properties["PASSWORD"].ToCharArray();
 

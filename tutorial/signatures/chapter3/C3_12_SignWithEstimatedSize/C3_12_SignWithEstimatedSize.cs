@@ -17,7 +17,7 @@ using iTextSharp.text.pdf.security;
 
 namespace signatures.chapter3 {
 
-    public class C3_12_SignWithEstimatedSize : C3_01_SignWithCAcert {
+    public class C3_12_SignWithEstimatedSize {
         public static String DEST = "../../../../results/chapter3/hello_estimated.pdf";
 
         public static void Main(String[] args) {
@@ -52,7 +52,7 @@ namespace signatures.chapter3 {
             while (!succeeded) {
                 try {
                     Console.WriteLine("Attempt: " + estimatedSize + " bytes");
-                    app.Sign(SRC, DEST, chain, pk, DigestAlgorithms.SHA256, CryptoStandard.CMS, "Test", "Ghent",
+                    C3_01_SignWithCAcert.Sign(C3_01_SignWithCAcert.SRC, DEST, chain, pk, DigestAlgorithms.SHA256, CryptoStandard.CMS, "Test", "Ghent",
                              null, ocspClient, tsaClient, estimatedSize);
                     succeeded = true;
                     Console.WriteLine("Succeeded!");
