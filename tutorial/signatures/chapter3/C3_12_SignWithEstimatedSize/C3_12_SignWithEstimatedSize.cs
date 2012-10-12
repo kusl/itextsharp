@@ -52,7 +52,7 @@ namespace signatures.chapter3 {
             while (!succeeded) {
                 try {
                     Console.WriteLine("Attempt: " + estimatedSize + " bytes");
-                    C3_01_SignWithCAcert.Sign(C3_01_SignWithCAcert.SRC, DEST, chain, pk, DigestAlgorithms.SHA256, CryptoStandard.CMS, "Test", "Ghent",
+                    C3_01_SignWithCAcert.Sign(DEST, chain, pk, DigestAlgorithms.SHA256, CryptoStandard.CMS, "Test", "Ghent",
                              null, ocspClient, tsaClient, estimatedSize);
                     succeeded = true;
                     Console.WriteLine("Succeeded!");

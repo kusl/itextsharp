@@ -58,7 +58,7 @@ namespace signatures.chapter3 {
 
             IList<ICrlClient> crlList = new List<ICrlClient>();
             crlList.Add(crlClient);
-            C3_01_SignWithCAcert.Sign(C3_01_SignWithCAcert.SRC, DEST, chain, pk, DigestAlgorithms.SHA256, CryptoStandard.CMS, "Test",
+            C3_01_SignWithCAcert.Sign(DEST, chain, pk, DigestAlgorithms.SHA256, CryptoStandard.CMS, "Test",
                      "Ghent",
                      crlList, null, null, 0);
         }

@@ -45,7 +45,7 @@ namespace signatures.chapter3 {
             LoggerFactory.GetInstance().SetLogger(new SysoLogger());
             IList<ICrlClient> crlList = new List<ICrlClient>();
             crlList.Add(new CrlClientOnline());
-            C3_01_SignWithCAcert.Sign(C3_01_SignWithCAcert.SRC, DEST, chain, pk, DigestAlgorithms.SHA256, CryptoStandard.CMS, "Test",
+            C3_01_SignWithCAcert.Sign(DEST, chain, pk, DigestAlgorithms.SHA256, CryptoStandard.CMS, "Test",
                      "Ghent",
                      crlList, null, null, 0);
         }

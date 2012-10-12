@@ -46,7 +46,7 @@ namespace signatures.chapter3 {
             TSAClientBouncyCastle tsaClient = new TSAClientBouncyCastle(tsaUrl, tsaUser, tsaPass);
 
             tsaClient.SetTSAInfo(new TSAInfoTimeStampLogger());
-            C3_01_SignWithCAcert.Sign(C3_01_SignWithCAcert.SRC, DEST, chain, pk, DigestAlgorithms.SHA256, CryptoStandard.CMS, "Test",
+            C3_01_SignWithCAcert.Sign(DEST, chain, pk, DigestAlgorithms.SHA256, CryptoStandard.CMS, "Test",
                      "Ghent",
                      null, ocspClient, tsaClient, 0);
             Console.ReadKey();

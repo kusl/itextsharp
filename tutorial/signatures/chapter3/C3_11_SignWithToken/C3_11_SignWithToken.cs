@@ -96,7 +96,7 @@ namespace signatures.chapter3 {
             IList<ICrlClient> crlList = new List<ICrlClient>();
             crlList.Add(new CrlClientOnline(chain));
             C3_11_SignWithToken app = new C3_11_SignWithToken();
-            app.Sign(SRC, DEST, chain, pk, DigestAlgorithms.SHA1, CryptoStandard.CMS, "Test",
+            app.Sign(SRC, DEST, chain, pk, DigestAlgorithms.SHA256, CryptoStandard.CMS, "Test",
                      "Ghent",
                      crlList, ocspClient, tsaClient, 0);
         }

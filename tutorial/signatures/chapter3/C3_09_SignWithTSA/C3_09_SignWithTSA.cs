@@ -45,7 +45,7 @@ namespace signatures.chapter3 {
             }
             IOcspClient ocspClient = new OcspClientBouncyCastle();
             ITSAClient tsaClient = new TSAClientBouncyCastle(tsaUrl, tsaUser, tsaPass);
-            C3_01_SignWithCAcert.Sign(C3_01_SignWithCAcert.SRC, DEST, chain, pk, DigestAlgorithms.SHA256, CryptoStandard.CMS, "Test", "Ghent",
+            C3_01_SignWithCAcert.Sign(DEST, chain, pk, DigestAlgorithms.SHA256, CryptoStandard.CMS, "Test", "Ghent",
                      null, ocspClient, tsaClient, 0);
         }
     }

@@ -19,10 +19,10 @@ using iTextSharp.text.pdf.security;
 
 namespace signatures.chapter3 {
     public class C3_01_SignWithCAcert {
-        public static String SRC = "../../../../resources/hello.pdf";
+        private static String SRC = "../../../../resources/hello.pdf";
         public static String DEST = "../../../../results/chapter3/hello_cacert.pdf";
 
-        static public void Sign(String src, String dest,
+        static public void Sign(String dest,
                          ICollection<X509Certificate> chain, ICipherParameters pk,
                          String digestAlgorithm, CryptoStandard subfilter,
                          String reason, String location,
@@ -35,7 +35,7 @@ namespace signatures.chapter3 {
             PdfStamper stamper = null;
             FileStream os = null;
             try {
-                reader = new PdfReader(src);
+                reader = new PdfReader(SRC);
                 os = new FileStream(dest, FileMode.Create);
                 stamper = PdfStamper.CreateSignature(reader, os, '\0');
                 // Creating the appearance
@@ -77,7 +77,7 @@ namespace signatures.chapter3 {
             foreach (X509CertificateEntry entry in ks.GetCertificateChain(alias)) {
                 chain.Add(entry.Certificate);    
             }
-            Sign(SRC, DEST, chain, pk, DigestAlgorithms.SHA256, CryptoStandard.CMS, "Test",
+            Sign(DEST, chain, pk, DigestAlgorithms.SHA256, CryptoStandard.CMS, "Test",
                      "Ghent", null, null, null, 0);
         }
     }
