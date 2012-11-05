@@ -1,0 +1,96 @@
+NCryptoki LICENSE AGREEMENT
+
+Please read carefully this legal license agreement (called the "Agreement"). Your use of the NCryptoki (called
+the "Software") indicates your acceptance of the following terms and conditions. If you do not agree to
+these terms and conditions, you must not install or use the Software.
+The term "Software" means the software or any related documentation, any updated or revised versions
+subsequently obtained via download, and all whole or partial copies of each, including portions merged into
+other programs. The Software consists of binary code (called the “Runtime”), audio/visual content, related
+documentation and licensed materials.
+
+1. The granting of a license is equivalent to a right to use the Software under all terms and conditions
+(“Authorized Purpose”) expressed in this License Agreement. The ownership and copyright of the
+product remain with the Author and the Author's rights are protected by the copyright laws of individual
+countries as well as by international copyright laws.
+
+2. The Software is distributed under three types of license:
+a. Shareware License
+The Author grants you a non-exclusive, non-transferable license to download the Software and to use it
+without any fee only for Non-Commercial and lawful end use.
+A shareware notice will appear each time the Runtime is loaded to inform the user that he is using the
+Software under the Shareware License.
+b. Personal License
+The Author grants you a non-exclusive license to download the Software and to use it for personal and
+lawful end use with a Personal License fee as described in: http://www.ncryptoki.com
+Granting a "Personal" license means granting the right to use the Software only to develop a personal
+or a commercial application and the right to distribute, without any additional fee, only one copy of the
+Runtime.
+c. Site License
+The Author grants you a non-exclusive license to download the Software and to use it for
+professional/commercial and lawful end use with a Site License fee as described in:
+http://www.ncryptoki.com.
+Granting a "Site" license means granting the right to use the Software to develop professional or
+commercial applications and the right to distribute without any additional fee an unlimited number of
+copies of the Runtime.
+d. Licenses for different use of the software are negated.
+e. Implied licenses are negated.
+
+3. The Software is owned by the Author Ugo Chirico and is copyrighted. The Intellectual Property remains
+to the Author. The Software is protected by the copyright laws of the State of Italy and international
+treaty provisions. Your possession, installation or use of the Software does not transfer to you any title
+to the intellectual property right in the Software and you will not acquire any rights to the Software
+except as expressly provided in this agreement.
+
+4. You cannot use, copy, rent, sublicense, sell, lease, merge, modify, reverse assemble, reverse compile,
+or otherwise translate or transfer the Software except as expressly provided in this agreement.
+
+5. You may distribute copies of the shareware version of the Software including always this license
+agreement. You may assume you have the Author's authority to distribute the unlicensed shareware
+version, unless the Author explicitly tell you otherwise. The Software must, however remain in its
+original, unmodified state, and all its constituent files and this license agreement must be included. Noone
+may charge for the unregistered version itself, although a reasonable fee for the media used and
+copying costs is allowable.
+a. Personal Licensee can distribute, without any additional fee, only one copy of the Runtime as a part
+of the application developed using the Software.
+b. Site Licensee can distribute, without any additional fee, an unlimited number of copies of the
+Runtime as a part of the applications developed using the Software.
+c. The Runtime distributed as part of the Application will continue to be subject to the terms and
+conditions of this Agreement. You agree to license the Application to your customers under a written
+license agreement containing terms and conditions with regard to the Software and Runtimes that are
+at least as restrictive as those contained herein.
+
+6. You may terminate your license at any time. If you do so, all your license rights to the Software are
+terminated. The Author may terminate your license if you fail to comply with the terms of this
+Agreement. If the Author does so, all your license rights to the Software are terminated and you must
+destroy all copies of it.
+
+7. Warranty Disclaimer and Limitation of Liability: THE LICENSOR LICENSES THE SOFTWARE "AS IS"
+WITHOUT WARRANTIES (OR CONDITIONS) OF ANY KIND, EXPRESS OR IMPLIED WITH RESPECT TO
+THE PROGRAM, INCLUDING THE IMPLIED WARRANTIES (OR CONDITIONS) OF MERCHANTABILITY
+AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK ARISING OUT OF USE OR
+PERFORMANCE OF THE PROGRAM AND DOCUMENTATION REMAINS WITH YOU.
+THE AUTHOR WILL NOT BE LIABLE FOR ANY ILLEGAL USE OF THE SOFTWARE OR FOR ANY USE OF
+THE SOFTWARE THAT VIOLATE LOCALE JURISDICTION'S LAWS.
+THE AUTHOR WILL NOT BE LIABLE FOR ANY SPECIAL, INCIDENTAL, OR INDIRECT DAMAGES THAT
+RESULT FROM USING THE SOFTWARE OR FOR ANY ECONOMIC CONSEQUENTIAL DAMAGES
+(INCLUDING LOST PROFITS OR SAVINGS), EVEN IF THE AUTHOR HAS BEEN ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGES. FURTHERMORE THE AUTHOR WILL NOT BE LIABLE FOR THE LOSS
+OF, OR DAMAGE TO, YOUR RECORDS OR DATA AND WILL NOT BE LIABLE FOR ANY DAMAGES
+CLAIMED BY YOU BASED ON ANY THIRD PARTY CLAIM. THE AUTHOR WILL NOT BE LIABLE FOR ANY
+SPECIAL, INCIDENTAL, OR INDIRECT DAMAGES THAT RESULT FROM USING THE SOFTWARE IN AN
+ILLEGAL WAY OR IN A WAY WHICH VIOLATES LOCALE JURISDICTION'S LAWS OR FOR ANY
+ECONOMIC CONSEQUENTIAL DAMAGES (INCLUDING LOST PROFITS OR SAVINGS), EVEN IF THE
+AUTHOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. FURTHERMORE THE AUTHOR
+WILL NOT BE LIABLE FOR THE LOSS OF, OR DAMAGE TO, YOUR RECORDS OR DATA AND WILL NOT
+BE LIABLE FOR ANY DAMAGES CLAIMED BY YOU BASED ON ANY THIRD PARTY CLAIM.
+
+8. This Agreement is the only understanding and agreement we have regarding your use of the Software.
+It supersedes all other communications, understandings or agreements we may have had prior to this
+Agreement.
+
+9. Licensee’s obligations under this Agreement shall continue in effect without limit in time.
+
+10. This Agreement shall be governed by Italian Law.
+
+The Author:
+Ugo Chirico
