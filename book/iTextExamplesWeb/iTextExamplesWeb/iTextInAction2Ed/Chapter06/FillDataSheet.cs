@@ -37,8 +37,10 @@ namespace kuujinbo.iTextInAction2Ed.Chapter06 {
           PdfReader reader = new PdfReader(datasheet);          
           string dest = string.Format(RESULT, movie.Imdb);
           using (MemoryStream ms = new MemoryStream()) {
-            using (PdfStamper stamper = new PdfStamper(reader, ms)) {           
-              Fill(stamper.AcroFields, movie);
+            using (PdfStamper stamper = new PdfStamper(reader, ms)) {
+              AcroFields fields = stamper.AcroFields;
+              fields.GenerateAppearances = true;
+              Fill(fields, movie);
               if (movie.Year == 2007) stamper.FormFlattening = true;
             }
             zip.AddEntry(dest, ms.ToArray());

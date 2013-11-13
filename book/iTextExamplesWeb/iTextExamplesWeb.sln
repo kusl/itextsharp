@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iTextExamplesWeb", "iTextExamplesWeb\iTextExamplesWeb.csproj", "{17C351FF-9B9D-4B6A-91B0-EADCF58DBE1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "itextsharp(VS2010)", "..\..\src\core\itextsharp(VS2010).csproj", "{84C4FDD9-3ED7-453B-B9DA-B3ED52CB071C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "itextsharp(VS2010)", "%ITEXTSHARP%\core\itextsharp(VS2010).csproj", "{84C4FDD9-3ED7-453B-B9DA-B3ED52CB071C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "itextsharp.pdfa(VS2010)", "..\..\src\extras\itextsharp.pdfa\itextsharp.pdfa(VS2010).csproj", "{C892FA61-C495-4F30-8799-A198F89F23F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "itextsharp.pdfa(VS2010)", "%ITEXTSHARP%\extras\itextsharp.pdfa\itextsharp.pdfa(VS2010).csproj", "{C892FA61-C495-4F30-8799-A198F89F23F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iTextAsian(VS2010)", "..\..\src\extras\iTextAsian\iTextAsian(VS2010).csproj", "{2F467830-A94B-4C44-B17B-0A81CBDB8CB2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iTextAsian(VS2010)", "%ITEXTSHARP%\extras\iTextAsian\iTextAsian(VS2010).csproj", "{2F467830-A94B-4C44-B17B-0A81CBDB8CB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iTextSharp.xtra(VS2010)", "..\..\src\extras\iTextSharp.xtra\iTextSharp.xtra(VS2010).csproj", "{BE1934CF-90A9-43D3-A794-7E540874EDBB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iTextSharp.xtra(VS2010)", "%ITEXTSHARP%\extras\iTextSharp.xtra\iTextSharp.xtra(VS2010).csproj", "{BE1934CF-90A9-43D3-A794-7E540874EDBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

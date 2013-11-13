@@ -80,9 +80,6 @@ namespace kuujinbo.iTextInAction2Ed {
           ResourceDirectory = new Uri(
               new Uri(BaseDirectory), "iTextInAction2Ed/resources"
               ).LocalPath;
-          BaseFont.AddToResourceSearch(Path.Combine(
-              BaseDirectory, "iTextAsian.dll"
-                                           ));
       }
     }
 /* ###########################################################################

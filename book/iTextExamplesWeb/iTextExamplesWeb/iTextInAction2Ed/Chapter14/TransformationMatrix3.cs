@@ -5,11 +5,9 @@
  * This example only works with the AGPL version of iText.
  */
 using System;
-using System.Drawing.Drawing2D;
 using System.IO;
-using System.Collections.Generic;
-using System.Linq;
 using Ionic.Zip;
+using iTextSharp.awt.geom;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 
@@ -58,28 +56,26 @@ namespace kuujinbo.iTextInAction2Ed.Chapter14 {
           // add it
           canvas.SaveState();
           canvas.AddTemplate(template, 0, 0);
-          Matrix matrix = null;
-          using ( matrix = new Matrix() ) {
-            matrix.Translate(-595, 0);
-            matrix.Scale(0.5f, 0.5f);
-            canvas.Transform(matrix);
-            canvas.AddTemplate(template, 0, 0);
-            matrix = new Matrix(1f, 0f, 0f, 1f, 595f, 595f);            
-            canvas.AddTemplate(template, matrix);
-            canvas.RestoreState();
+          AffineTransform af = new AffineTransform();
+          af.Translate(-595, 0);
+          af.Scale(0.5f, 0.5f);
+          canvas.Transform(af);
+          canvas.AddTemplate(template, 0, 0);
+          canvas.ConcatCTM(AffineTransform.GetTranslateInstance(595, 595));
+          canvas.AddTemplate(template, 0, 0);
+          canvas.RestoreState();
 
-            canvas.SaveState();
-            matrix = new Matrix(1f, 0f, 0.4f, 1f, -750f, -650f);
-            canvas.AddTemplate(template, matrix);
-            canvas.RestoreState();
-            
-            canvas.SaveState();
-            matrix = new Matrix(0, -1, -1, 0, 650, 0);
-            canvas.AddTemplate(template, matrix);
-            matrix = new Matrix(0, -0.2f, -0.5f, 0, 350, 0);
-            canvas.AddTemplate(template, matrix);
-            canvas.RestoreState();         
-          }
+          canvas.SaveState();
+          af = new AffineTransform(1f, 0f, 0.4f, 1f, -750f, -650f);
+          canvas.AddTemplate(template, af);
+          canvas.RestoreState();
+          
+          canvas.SaveState();
+          af = new AffineTransform(0, -1, -1, 0, 650, 0);
+          canvas.AddTemplate(template, af);
+          af = new AffineTransform(0, -0.2f, -0.5f, 0, 350, 0);
+          canvas.AddTemplate(template, af);
+          canvas.RestoreState();         
         }
         return ms.ToArray();
       }
